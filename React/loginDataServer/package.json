@@ -6,9 +6,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "gud": "^1.0.0",
-    "js-tokens": "^4.0.0",
-    "loose-envify": "^1.4.0",
     "pg": "^8.0.2"
   },
   "devDependencies": {},
