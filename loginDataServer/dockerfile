@@ -9,6 +9,9 @@ COPY package-lock.json ./package-lock.json
 
 RUN npm install
 
+COPY ./loginDataServer.js .
+COPY ./User.js .
+
 EXPOSE 8080
 
 CMD ["node" ,"loginDataServer.js"]

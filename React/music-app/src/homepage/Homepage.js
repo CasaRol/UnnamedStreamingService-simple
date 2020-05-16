@@ -9,7 +9,7 @@ import { addTitle, addSongDur, addSong_url, addSize, addAlbum, addArtist, addArt
 import SongOverview from './browser/SongOverview.js';
 import NotFound from './misc/NotFound.js';
 import AccountSettings from './misc/AccountSettings';
-import { METADATA_SERVER } from '../env_vars.js';
+import { METADATA_SERVER, IMAGE_SERVER } from '../env_vars.js';
 
 
 function Homepage() {

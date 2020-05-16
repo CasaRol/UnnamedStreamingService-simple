@@ -9,6 +9,8 @@ COPY package-lock.json ./package-lock.json
 
 RUN npm install
 
-EXPOSE 2040
+COPY ./metadataServer.js .
+
+EXPOSE 2060
 
 CMD ["node", "metadataServer.js"]
