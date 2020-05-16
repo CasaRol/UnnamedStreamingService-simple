@@ -11,7 +11,7 @@ services:
             - ".:/app"
             - "/app/node_modules"
         environment:
-             - NODE_ENV=development
+             - NODE_ENV=production
         stdin_open: true
     serverproxy:
         build: 
@@ -25,14 +25,25 @@ services:
     loginserver:
         container_name: nodeLogin
         build:
-            context: ./loginDataServer
-            dockerfile: loginDataServer
+            image: unservice/login_service
         environment:
             - NODE_ENV=development
-    musicserver:
-        container_name: nodeMusic
+    metadataserver:
+        container_name: nodemeta
         build:
-            context: ./musicServer
-            dockerfile: musicServer
+            image: unservice/metadata_service
         environment:
             - NODE_ENV=development
+    streamingserver:
+        container_name: nodestreaming
+        build:
+            image: unservice/streaming_service_simple
+        environment:
+            - NODE_ENV=development
+    imageserver:
+        container_name: nodeimage
+        build:
+            image: unservice/image_service
+        environment:
+            - NODE_ENV=development
+    

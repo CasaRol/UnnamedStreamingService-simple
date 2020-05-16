@@ -9,7 +9,7 @@ import { addTitle, addSongDur, addSong_url, addSize, addAlbum, addArtist, addArt
 import SongOverview from './browser/SongOverview.js';
 import NotFound from './misc/NotFound.js';
 import AccountSettings from './misc/AccountSettings';
-import { MUSIC_SERVER } from '../env_vars.js';
+import { METADATA_SERVER } from '../env_vars.js';
 
 
 function Homepage() {
@@ -23,7 +23,7 @@ function Homepage() {
   useEffect(loadMetaData, []);
 
   function loadMetaData() {
-    fetch(`${MUSIC_SERVER}/metadata.json`, {credentials: 'same-origin'})
+    fetch(`${METADATA_SERVER}/metadata.json`, {credentials: 'same-origin'})
       .then((response => response.json()))
       .then((json => JSON.parse(json)))
       .then((data) => insertData(data));

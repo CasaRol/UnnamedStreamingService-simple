@@ -1,0 +1,16 @@
+FROM node:alpine
+
+ENV NODE_ENV production
+
+WORKDIR /app
+
+COPY package.json ./package.json
+COPY package-lock.json ./package-lock.json
+
+RUN npm install
+
+COPY ./music ./music
+
+EXPOSE 2040
+
+CMD ["node", "streamingServer.js"]
