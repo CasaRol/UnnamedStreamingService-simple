@@ -38,7 +38,7 @@ function insertData(data){
     dispatch(addSize(info.size));
     dispatch(addAlbum(info.album));
     dispatch(addArtist(info.artist));
-    dispatch(addArt(`${MUSIC_SERVER}/assets/${info.image_url}`));
+    dispatch(addArt(`${IMAGE_SERVER}/image/${info.image_url}`));
   });
 }
 
