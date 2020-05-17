@@ -8,9 +8,21 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: servicename
-              servicePort: 8080
+              serviceName: frontend-serivice
+              servicePort: 100080
           - path: /image/*
             backend:
                 serviceName: image-service
                 servicePort: 102020
+          - path: /login/*
+            backend:
+              serviceName: login-service
+              servicePort: 108080
+          - path: /metadata/*
+            backend:
+              serviceName: metadata-service
+              servicePort: 102060
+          - path: /streaming/*
+            backend:
+              serviceName: streaming-service
+              servicePort: 102040
