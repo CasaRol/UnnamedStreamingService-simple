@@ -7,5 +7,5 @@ spec:
   selector:
     app: metadata
   ports:
-  - port: 102060
+  - port: 12060
     targetPort: 2060

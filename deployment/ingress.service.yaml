@@ -13,16 +13,16 @@ spec:
           - path: /image/*
             backend:
                 serviceName: image-service
-                servicePort: 102020
+                servicePort: 12020
           - path: /login/*
             backend:
               serviceName: login-service
-              servicePort: 108080
+              servicePort: 18080
           - path: /metadata/*
             backend:
               serviceName: metadata-service
-              servicePort: 102060
+              servicePort: 12060
           - path: /streaming/*
             backend:
               serviceName: streaming-service
-              servicePort: 102040
+              servicePort: 12040

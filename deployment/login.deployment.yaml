@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: login
-        image: unservice/login_serive
+        image: unservice/login_service
         ports:
         - containerPort: 8080
