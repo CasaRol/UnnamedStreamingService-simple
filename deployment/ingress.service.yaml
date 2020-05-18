@@ -22,7 +22,7 @@ spec:
             backend:
               serviceName: metadata-service
               servicePort: 12060
-          - path: /streaming/*
-            backend:
-              serviceName: streaming-service
-              servicePort: 12040
+          # - path: /streaming/*
+          #   backend:
+          #     serviceName: streaming-service
+          #     servicePort: 12040
