@@ -7,5 +7,5 @@ spec:
   selector:
     app: streaming
   ports:
-  - port: 102040
+  - port: 12040
     targetPort: 2040

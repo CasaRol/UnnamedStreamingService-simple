@@ -7,5 +7,5 @@ spec:
   selector:
     app: image
   ports:
-  - port: 102020
+  - port: 12020
     targetPort: 2020

@@ -7,5 +7,5 @@ spec:
   selector:
     app: login
   ports:
-  - port: 108080
+  - port: 18080
     targetPort: 8080
