@@ -10,19 +10,19 @@ spec:
             backend:
               serviceName: frontend-service
               servicePort: 10080
-          - path: /image/*
-            backend:
-                serviceName: image-service
-                servicePort: 12020
-          - path: /login/*
-            backend:
-              serviceName: login-service
-              servicePort: 18080
-          - path: /metadata/*
-            backend:
-              serviceName: metadata-service
-              servicePort: 12060
-          # - path: /streaming/*
+          # - path: /image/*
+          #   backend:
+          #       serviceName: image-service
+          #       servicePort: 12020
+          # - path: /login/*
+          #   backend:
+          #     serviceName: login-service
+          #     servicePort: 18080
+          # - path: /metadata/*
+          #   backend:
+          #     serviceName: metadata-service
+          #     servicePort: 12060
+          # # - path: /streaming/*
           #   backend:
           #     serviceName: streaming-service
           #     servicePort: 12040
