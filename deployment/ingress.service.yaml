@@ -9,7 +9,7 @@ spec:
           - path: /
             backend:
               serviceName: frontend-service
-              servicePort: 100080
+              servicePort: 10080
           - path: /image/*
             backend:
                 serviceName: image-service
