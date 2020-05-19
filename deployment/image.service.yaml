@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: image-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: image
   ports:
-  - port: 12020
+  - port: 2020
     targetPort: 2020

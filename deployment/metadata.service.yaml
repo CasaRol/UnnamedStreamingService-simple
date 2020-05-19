@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: metadata-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: metadata
   ports:
-  - port: 12060
+  - port: 2060
     targetPort: 2060

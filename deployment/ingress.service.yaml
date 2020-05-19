@@ -2,15 +2,21 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: traffic-router
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: trafic-router-ip
+    kubernetes.io/ingress.allow-http: "false"
+
 spec:
+  tls:
+    - secretName: uns-tls-secret
   rules:
     - http:
         paths:
-          - path: /
+          - path: /*
             backend:
               serviceName: frontend-service
               servicePort: 10080
-          # - path: /image/*
+          # - path: /image/
           #   backend:
           #       serviceName: image-service
           #       servicePort: 12020

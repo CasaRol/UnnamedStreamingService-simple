@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: login-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: login
   ports:
-  - port: 18080
+  - port: 8080
     targetPort: 8080

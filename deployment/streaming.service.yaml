@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: streaming-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: streaming
   ports:
-  - port: 12040
+  - port: 2040
     targetPort: 2040

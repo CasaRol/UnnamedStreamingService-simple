@@ -8,6 +8,11 @@ const cors = require('cors');
 app.use(cors());
 app.options('*', cors());
 
+app.get('/', (req,res) => {
+  res.status(200);
+  console.log('succes on a slash');
+  res.send('succes on a slash');
+});
 var server = http.createServer(app);
 
 server.listen(2020, function () {
