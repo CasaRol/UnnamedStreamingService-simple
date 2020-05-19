@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tangle-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-tangle
+  template:
+    metadata:
+      labels:
+        app: test-tangle
+    spec:
+      containers:
+      - name: test-tangle
+        image: unservice/streaming_service_tangle
+        ports:
+        - containerPort: 2040

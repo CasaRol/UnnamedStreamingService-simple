@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whirlpool-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-whirlpool
+  template:
+    metadata:
+      labels:
+        app: test-whirlpool
+    spec:
+      containers:
+      - name: test-whirlpool
+        image: unservice/streaming_service_whirlpool
+        ports:
+        - containerPort: 2040
