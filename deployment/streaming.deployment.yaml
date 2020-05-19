@@ -12,8 +12,16 @@ spec:
       labels:
         app: streaming
     spec:
+      volumes:
+        - name: stream-song-pv
+          persistentVolumeClaim:
+            claimName: song-pv-claim
       containers:
       - name: streaming
         image: unservice/streaming_service_simple
         ports:
         - containerPort: 2040
+        volumeMounts:
+          - mountPath: "/app/volume"
+            name: stream-song-pv
+      

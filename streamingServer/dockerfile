@@ -10,7 +10,7 @@ COPY package-lock.json ./package-lock.json
 RUN npm install
 
 COPY ./streamingServer.js .
-COPY ./music ./music
+#COPY ./music ./music
 
 EXPOSE 2040
 

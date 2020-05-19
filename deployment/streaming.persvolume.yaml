@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-songs
+spec:
+  storageClassName: ""
+  capacity:
+    storage: 20G
+  accessModes:
+    - ReadOnlyMany
+  claimRef:
+    namespace: default
+    name: song-pv-claim
+  gcePersistentDisk:
+    pdName: persistance-disk
+    fsType: ext4
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: song-pv-claim
+spec:
+  storageClassName: ""
+  accessModes: 
+    - ReadOnlyMany
+  resources:
+    requests:
+      storage: 20G

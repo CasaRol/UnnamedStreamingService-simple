@@ -23,7 +23,7 @@ app.get('/playSong', (req, res) => {
       loadedSong = req.query.song;
       songArray = [];
   
-      const filePath = path.resolve(__dirname, './music', req.query.song + '.mp3');
+      const filePath = path.resolve(__dirname, './volume/music', req.query.song + '.mp3');
   
       // not actually sure this is needed for anything???
       const stat = fileSystem.statSync(filePath);   // we need the size to divide into segments in the same way as frontend
