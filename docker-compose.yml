@@ -11,22 +11,26 @@ services:
            # - ./serverProxy/certs:/etc/nginx/certs
     loginserver:
         container_name: nodeLogin
-        image: unservice/login_service
+        build:
+            context: ./loginDataServer
         environment:
             - NODE_ENV=development
     metadataserver:
         container_name: nodemeta
-        image: unservice/metadata_service
+        build:
+            context: ./metadataServer
         environment:
             - NODE_ENV=development
     streamingserver:
         container_name: nodestreaming
-        image: unservice/streaming_service_simple
+        build:
+            context: ./streamingServer
         environment:
             - NODE_ENV=development
     imageserver:
         container_name: nodeimage
-        image: unservice/image_service
+        build:
+            context: ./imageServer
         environment:
             - NODE_ENV=development
     
