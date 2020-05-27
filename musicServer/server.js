@@ -18,7 +18,7 @@ const SEGMENT_SIZE = 200000;    // size of each segment sent of a song being str
 var loadedSong = "";
 var songArray = [];
 
-app.use('/assets', express.static('assets/images'));
+app.use('/image', express.static('assets/images'));
 
 var server = http.createServer(app);
 
